@@ -1,7 +1,10 @@
+#ifndef SUDOKU_H
+#define SUDOKU_H
 #include <stdio.h>
 #include <stdlib.h>
 
-char POSIBLE = 0x1FF;
+// char POSIBLE = 0x1FF;
+extern char POSIBLE;
 
 typedef struct Box{
     struct Box * next;    
@@ -18,3 +21,5 @@ typedef struct  Square{
 int ** createPuzzle();
 void printPuzzle(int ** puzzle);
 Square *** setUpPuzzle(int ** puzzle);
+
+#endif
